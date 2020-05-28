@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background="./lib/img/image-start.png">
+				<h1>Microservices</h1>
+				<h4> / </h4>
+				<h1>Docker</h1>
+				<p>
+					<small>Created by <a href="https://github.com/dzmitry-duboyski">Dzmitry Dubovsky</a> </small>
+				</p>
+				<p>
+					Language: <a href="./index.html">En</a>/<a href="./index-ru.html">Ru</a>  
+				</p>
+			</section>
+
+			<section data-background="./lib/img/image-service.png">
+				<section id='fragment'>
+				<h4>Проблемы монолита:</h4>
+				<ul>
+					<li class="fragment">Высокая сложность</li>
+					<li class="fragment">Медленная разработка</li>
+					<li class="fragment">Длинный и тяжелый путь от сохранения изменений до их развертывания</li>
+					<li class="fragment">Сложности масштабирования</li>
+					<li class="fragment">Сложности тестирования</li>
+					<li class="fragment">Зависимость от  постепенно устаревающего стека технологий</li>
+				</ul>
+				</section>
+			</section>
+
+			<section data-background="./lib/img/image-service.png">
+				<h4>идея</h4>
+				<p>Микросервисы  –  это стиль проектирования, который разбивает продукт на отдельные сервисы с разными независимыми функциями. </p>
+				<p>Микрокросервис -  это  автономный,  независимо развертываемый программный компонент, который реализует  полезные функции.</p>
+			</section>
+
+			<section data-background="./lib/img/image-service.png">
+				<h4>проектироавние микросервиса</h4>
+				<p>Разработкой и поддержанием  одного микросервиса занимается одна  команда.</p>
+				<!-- <p>При выборе команды  можно руководствоваться правилом двух пицц, команда должна быть такого размера, что бы команду можно было накормить двумя пиццами.  </p>
+				<p>Если микросервис не большой, то им может заниматься один человек.</p> -->
+			</section>
+
+			<section data-background="./lib/img/image-service.png">
+				<section id="fragment">
+					<h4>Плюсы микросервисной архитектуры</h4>
+					<ul>
+						<li class="fragment">Сервисы развертываются независимо друг от друга</li>
+						<li class="fragment">Сервисы получаются небольшими  и простыми в обслуживании</li>
+						<li class="fragment">Независимое масштабирование микросервисов</li>
+						<li class="fragment">Автономность команд разработки</li>
+						<li class="fragment">Возможность эксперементировать и  внедрять новые технологии</li>
+						<li class="fragment">Изолированность  неполадок</li>
+					</ul>
+				</section>
+			</section>
+
+			<section data-background="./lib/img/image-service.png">
+				<section id="fragment">
+					<h5>Недостатки микросервисной архитектуры:</h5>
+					<ul>
+						<li class="fragment">Сложно подобрать подходящий набор сервисов.</li>
+						<li class="fragment">Сложность распределенных систем затрудняет разработку, тестирование и развертывание.</li>
+						<li class="fragment">Развертывание функций, охватывающих несколько сервисов, требует тщательной координации.</li>
+						<li class="fragment">Решение о том, когда следует переходить  на микросервисную архитектуру, является нетривиальным.</li>
+					</ul>
+				</section>
+			</section>
+			<section  data-background="./lib/img/image-service.png">
+				<h2>Использовать микросервисы?</h2>
+				<h3>да/нет</h3>
+			</section>
+
+			<section data-background="./lib/img/image.png">
+				<section id="fragment">
+					<h4>Docker</h4>
+						<p class="fragment">Docker — программное обеспечение для автоматизации развёртывания и управления приложениями в средах с поддержкой контейнеризации. </p>
+						<p class="fragment">Docker  Позволяет «упаковать»  приложение.</p>
+				</section>
+			</section>
+			<section>
+					<section id="fragment" data-background="./lib/img/image.png">
+						<h4>Компоненты докера</h4>
+						<ul>
+							<li class="fragment">Docker engine</li>
+							<li class="fragment">Docker hub</li>
+							<li class="fragment">Docker swarm</li>
+							<li class="fragment">Docker compose</li>
+							<li class="fragment">Docker kinematic</li>
+							<li class="fragment">Docker machine</li>
+						</ul>
+					</section>
+			</section>
+			<section data-background="./lib/img/image.png">
+				<h4>Что такое контейнер?</h4>
+				<p>Контейнер  -   это упакованное  приложение со всеми его зависимостями   и средой. </p>
+			</section>
+
+			<section data-background="./lib/img/image.png">
+				<section id="fragment">
+					<h4>Плюсы использования  контейнеров:</h4>
+					<ul>
+						<li class="fragment">простой запуск контейнера</li>
+						<li class="fragment">гарантия того что наше приложение запуститься на другом  компьютере</li>
+						<li class="fragment">высокая производительность и скорость работы</li>
+					</ul>
+			</section>
+		</section>
+
+		<section data-background="./lib/img/image.png">
+			<h2>С чего начать?</h2>
+			<br>
+			<br>
+			<br>
+			<p>Документация по docker - <a href="https://docs.docker.com/">docs.docker.com</a></p>
+			<p>Docker песочница - <a href="https://www.docker.com/play-with-docker">play-with-docker</a></p>
+		</section>
+
+		<section data-background="./lib/img/image.png">
+			<h2>Спасибо за внимание</h2>
+		</section>
+	
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			hash: true,
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/highlight/highlight.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				}
+			]
+		});
+	</script>
+</body>
+
+</html>

@@ -1,50 +1,175 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background="./lib/img/image-start.png">
+				<h1>Microservices</h1>
+				<h4> / </h4>
+				<h1>Docker</h1>
+				<p>
+					<small>Created by <a href="https://github.com/dzmitry-duboyski">Dzmitry Dubovsky</a> </small>
+				</p>
+				<p>
+					Language: <a href="./index.html">En</a>/<a href="./index-ru.html">Ru</a>  
+				</p>
+			</section>
+
+			<section data-background="./lib/img/image-service.png">
+				<section id='fragment'>
+				<h4>Monolith problems:</h4>
+				<ul>
+					<li class="fragment">High complexity</li>
+					<li class="fragment">Slow development</li>
+					<li class="fragment">A long and hard way from saving changes to deployment</li>
+					<li class="fragment">Difficult to scale</li>
+					<li class="fragment">Hard to test</li>
+					<li class="fragment">Dependence on a gradually aging technology stack</li>
+				</ul>
+				</section>
+			</section>
+
+			<section data-background="./lib/img/image-service.png">
+				<h4>idea</h4>
+				<p>Microservices is a design style that breaks down a product into separate services with different independent functions.</p>
+				<p>Microservice is a standalone, independently deployable software component that implements useful functions.</p>
+			</section>
+
+			<section data-background="./lib/img/image-service.png">
+				<h4>microservice development</h4>
+				<p>One team develops and maintains one microservice.</p>
+			</section>
+
+			<section data-background="./lib/img/image-service.png">
+				<section id="fragment">
+					<h4>Pros of microservice architecture:</h4>
+					<ul>
+						<li class="fragment">Microservices are deployed independently of each other</li>
+						<li class="fragment">Microservices are not large and easy to maintain</li>
+						<li class="fragment">Independent scaling of microservices</li>
+						<li class="fragment">Autonomy of development teams</li>
+						<li class="fragment">An opportunity to experiment and introduce new technologies</li>
+						<li class="fragment">Error isolation</li>
+					</ul>
+				</section>
+			</section>
+
+			<section data-background="./lib/img/image-service.png">
+				<section id="fragment">
+					<h5>Disadvantages of microservice architecture:</h5>
+					<ul>
+						<li class="fragment">It’s hard to find the right set of microservices</li>
+						<li class="fragment">The complexity of distributed systems makes development, testing, and deployment difficult</li>
+						<li class="fragment">Deploying features spanning multiple microservices requires careful coordination</li>
+						<li class="fragment">The decision about when to switch to microservice architecture is nontrivial</li>
+					</ul>
+				</section>
+			</section>
+			<section  data-background="./lib/img/image-service.png">
+				<h2>Use microservices?</h2>
+				<h3>yes/no</h3>
+			</section>
+
+			<section data-background="./lib/img/image.png">
+				<section id="fragment">
+					<h4>Docker</h4>
+						<p class="fragment">Docker is software for automating the deployment and management of applications in containerized environments.</p>
+						<p class="fragment">Docker Allows you to "pack" the application with all its surroundings and dependencies into a container that can be transferred to any system, and also provides an environment for managing containers.</p>
+				</section>
+			</section>
+			<section>
+					<section id="fragment" data-background="./lib/img/image.png">
+						<h4>Docker consists of the following components:</h4>
+						<ul>
+							<li class="fragment">Docker engine</li>
+							<li class="fragment">Docker hub</li>
+							<li class="fragment">Docker swarm</li>
+							<li class="fragment">Docker compose</li>
+							<li class="fragment">Docker kinematic</li>
+							<li class="fragment">Docker machine</li>
+						</ul>
+					</section>
+			</section>
+			<section data-background="./lib/img/image.png">
+				<h4>What is a container ??</h4>
+				<p>A container is a packaged application with all its dependencies and the environment.</p>
+			</section>
+
+			<section data-background="./lib/img/image.png">
+				<section id="fragment">
+					<h4>Pros of using a container:</h4>
+					<ul>
+						<li class="fragment">Simple launch of the container</li>
+						<li class="fragment">Guarantee that our application will run on a different host</li>
+						<li class="fragment">High performance and speed</li>
+					</ul>
+			</section>
+		</section>
+
+		<section data-background="./lib/img/image.png">
+			<h2>Where to begin?</h2>
+			<br>
+			<br>
+			<br>
+			<p>Docker documentation - <a href="https://docs.docker.com/">docs.docker.com</a></p>
+			<p>Docker sandbox - <a href="https://www.docker.com/play-with-docker">play-with-docker</a></p>
+		</section>
+
+		<section data-background="./lib/img/image.png">
+			<h2>Thank you for the attention.</h2>
+		</section>
+	
 		</div>
+	</div>
 
-		<script src="js/reveal.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			hash: true,
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/highlight/highlight.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				}
+			]
+		});
+	</script>
+</body>
+
 </html>
